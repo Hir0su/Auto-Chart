@@ -11,7 +11,7 @@ AutoChart is a Python application that allows users to easily create charts from
 - Option to place the generated chart in a specific sheet
 - Automatic closing of running Excel instances to prevent file access conflicts
 
-## Requirements
+## Requirements for Development
 
 - Python 3.x
 - Required Python libraries:
@@ -20,6 +20,5 @@ AutoChart is a Python application that allows users to easily create charts from
   - psutil
   - tkinter (usually comes with Python)
 
-## Installation
-
-1. Not Available Yet
+## Installation for Users
+- Not available yet
