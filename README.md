@@ -21,7 +21,7 @@ AutoChart is a Python application that allows users to easily create charts from
   - tkinter (usually comes with Python)
 
 ## Installation for Users
-- Download the latest release in the releases tab
+- [Download](https://github.com/Hir0su/Auto-Chart/releases) the latest release in the releases tab
 
 ## User Manual for Users and Developers
-- Not uploaded yet
+- Included in the zip file you download from the [Releases](https://github.com/Hir0su/Auto-Chart/releases) tab.
