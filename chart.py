@@ -10,7 +10,7 @@ import openpyxl
 import logging
 from openpyxl.chart import BarChart, LineChart, AreaChart, BubbleChart, RadarChart, PieChart, DoughnutChart, ScatterChart, Reference
 from openpyxl.chart.legend import Legend
-from openpyxl.chart.plotarea import DataTable
+# from openpyxl.chart.plotarea import DataTable
 
 
 # Set up logging at the top of the file
@@ -51,20 +51,22 @@ def create_chart(file_path, sheet_name, start_cell, end_cell, chart_type, chart_
         
         chart.legend = Legend()
         
-        data_table = DataTable()
-        chart.plot_area.dTable = data_table
-        chart.plot_area.dTable.showHorzBorder = True
-        chart.plot_area.dTable.showVertBorder = True
-        chart.plot_area.dTable.showOutline = True
-        chart.plot_area.dTable.showKeys = True
+        # data_table = DataTable()
+        # chart.plot_area.dTable = data_table
+        # chart.plot_area.dTable.showHorzBorder = True
+        # chart.plot_area.dTable.showVertBorder = True
+        # chart.plot_area.dTable.showOutline = True
+        # chart.plot_area.dTable.showKeys = True
         
         chart.width = 16 + ((end_col_index - start_col_index + 1) * 0.8)
         chart.height = 8 + ((int(end_row) - start_row + 1) * 0.5)
 
+        # Find an empty cell for the chart
         empty_row = 1
         while target_worksheet.cell(row=empty_row, column=1).value is not None:
             empty_row += 1
 
+        # Add the chart to the worksheet at the found empty cell
         target_worksheet.add_chart(chart, f'A{empty_row}')
 
         logging.info(f"Chart created successfully. Type: {chart_type}, Title: {chart_title}")
